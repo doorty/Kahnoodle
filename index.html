@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Kahnoodle</title>
+  
+  <link rel="shortcut icon" href="images/favicon.ico" />
+  <link rel="apple-touch-icon" href="images/apple-touch-icon.png" />
+  <link href="css/styles.css" rel="stylesheet" type="text/css"/>
+  
+  <script src="js/thirdparty/dev/zepto.js" type="text/javascript"></script>  
+  <script src="js/thirdparty/dev/underscore.js" type="text/javascript"></script> 
+  <script src="js/thirdparty/dev/backbone.js" type="text/javascript"></script>
+  
+  <!--
+  <script src="js/thirdparty/prod/zepto-min.js" type="text/javascript"></script> 
+  <script src="js/thirdparty/prod/underscore-min.js" type="text/javascript"></script> 
+  <script src="js/thirdparty/prod/backbone-min.js" type="text/javascript"></script>
+  -->
+  
+  <script src="js/kahnoodle.js" type="text/javascript"></script>
+  <script src="js/main.js" type="text/javascript"></script>
+  
+  <!--<script id="kahnoodle_template" src="js/templates/all_templates.js" type="text/template"></script>-->
+  
+</head>
+<body>
+  <h1>Kahnoodle</h1>
+  <div id="news-feed"></div>
+  <ul id="kahnoodles">replace with kahnoodles</ul>
+  
+  
+  <!-- Templates --> 
+
+  <script type="text/template" id="kahnoodle-template">
+    <li id="<%= person %>">
+        <label><%= type %></label>
+        <p><%= description %></p>
+    </li>
+  </script>
+</body>
+</html>
