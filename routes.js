@@ -18,9 +18,13 @@ module.exports = function(app) {
 
   app.get('/:user', function(req, res) {
     if (req.session.user === req.params.user) {
+      // logged in and accessing my account
       res.send('user ' + req.params.user + ' is me!');
-    } else {
+    } else if (false) { 
+      // logged in but not my account
       res.send('user ' + req.params.user + ' is not me :/');
+    } else {
+      next();
     }
   });
 
