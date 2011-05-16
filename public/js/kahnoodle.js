@@ -1,10 +1,18 @@
 var Kahnoodle = Backbone.Model.extend({
+  
   defaults: {
     person:'',
     type:'',
     description:'',
     time:''
   },
+  
+  /*
+  url: function() {
+    return "/[collection]/[id]";  // default
+  }
+  */
+  
   validate: function(attributes) {
     if (person.length <= 0) {
       return "You must have a partner assigned to a Kahnoodle";
@@ -14,20 +22,25 @@ var Kahnoodle = Backbone.Model.extend({
       return "I do not know when the Kahnoodle happened"
     }
   },
+  
   initialize: function() {
     //alert("Welcome new Kahnoodle");
   }
+
 });
 
-var KahnoodleSet = Backbone.Collection.extend({
+var Kahnoodles = Backbone.Collection.extend({
+  
   model: Kahnoodle,
+  
   url: function() {
-      return this.document.url() + '/kahnoodles';
-    }
+      return 'username' + '/kahnoodles';
+  }
+  
 });
 
 var KahnoodleView = Backbone.View.extend({
-
+ 
   initialize: function() {   
     this.render();
   },

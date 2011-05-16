@@ -3,6 +3,8 @@
 <head>
   <title>Kahnoodle</title>
   
+  <meta name="viewport" content"width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  
   <link rel="shortcut icon" href="images/favicon.ico" />
   <link rel="apple-touch-icon" href="images/apple-touch-icon.png" />
   <link href="css/styles.css" rel="stylesheet" type="text/css"/>
@@ -24,8 +26,24 @@
   
 </head>
 <body>
-  <h1>Kahnoodle</h1>
-  <div id="news-feed"></div>
+  <header>
+    <h1>Kahnoodle</h1>
+  </header>
+  <section>
+    <div id="login-container">
+      <ul class="section">
+        <li class="title"><h2>Login</h2></li>
+        <li class="form">
+          <input type="email" name="email" placeholder="Enter your email" />
+          <button>Login</button>
+        </li>
+      </ul>
+    </div>
+  </sectioin>
+  <footer>
+    footer
+  </footer>
+  
   <ul id="kahnoodles">replace with kahnoodles</ul>
   
   
@@ -34,7 +52,7 @@
   <script type="text/template" id="kahnoodle-template">
     <li id="<%= person %>">
         <label><%= type %></label>
-        <p><%= description %></p>
+        <span>- <%= description %></span>
     </li>
   </script>
 </body>

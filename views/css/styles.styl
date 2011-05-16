@@ -1,0 +1,93 @@
+x-small-font-size = 0.5em
+small-font-size = 0.75em
+medium-font-size = default-font-size = 1em
+large-font-size = 1.25em
+x-large-font-size = 1.50em
+
+border-radius()
+  -webkit-border-radius arguments
+  
+gradient(color1, color2)  
+  background-image -webkit-gradient(linear, left bottom, left top, from(color1), to(color2))
+  
+gradient-button(color1, color2)
+  background-image -webkit-gradient(linear, left bottom, left top, color-stop(0.2, color1), color-stop(0.6, color2))
+
+box-shadow(color, depth)
+  -webkit-box-shadow:0 0 depth color
+  
+text-shadow(color)
+  text-shadow: color 0 1px 0;
+
+input()
+  max-width 237px
+  width 100%
+  padding 5px 7px
+  border-radius 5px
+  display block
+  margin 0 auto
+  font-size inherit
+  line-height 1.5
+
+button-for-inputs(text-color, shadow-color, gradient1, gradient2)
+  max-width 250px
+  width 100%
+  border-radius 5px
+  display block
+  margin 0 auto
+  font-size inherit
+  text-decoration none
+  font-weight bold
+  line-height 2
+  color:text-color
+  text-shadow(shadow-color)
+  gradient-button(gradient1, gradient2)
+  border 2px solid gradient1
+
+body
+  text-align center
+  font-size default-font-size
+  font-family "Helvetica Neue", Helvetica, Arial, Sans-Serif
+  background #f2eaea url('../images/split-background.png') repeat-x left 50%
+  
+a
+  color #ff0000
+  
+#login-wrapper
+  max-width:290px;
+  margin:20px auto;
+  
+  section#login
+    margin-bottom 10px
+    padding 20px
+    border-radius(10px)
+    background-color:#fff
+    box-shadow(#999, 6px)
+    
+    header
+      margin-bottom 15px
+      
+      h1
+        font-size x-large-font-size
+        font-weight normal
+        text-shadow(#f0f0f0)
+        color #ff0000
+    
+    #third-party-login
+    p
+      margin 0 0 10px 0
+      a.button
+        button-for-inputs(#fff, #000, #1D4088, #627AAD)
+    
+    #kahnoodle-login
+      p
+        margin 0 0 10px 0
+      input
+        input()
+        
+      a.button
+        button-for-inputs(#fff, #000, #780000, #ff0000)
+        
+      a.button:active
+        gradient-button(#ff0000, #780000) 
+        

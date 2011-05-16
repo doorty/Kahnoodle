@@ -1,0 +1,12 @@
+body{text-align:center;font-size:1em;font-family:"Helvetica Neue",Helvetica,Arial,Sans-Serif;background:#f2eaea url("../images/split-background.png") repeat-x left 50%}
+a{color:#f00}
+#login-wrapper{max-width:290px;margin:20px auto;}
+#login-wrapper section#login{margin-bottom:10px;padding:20px;-webkit-border-radius:10px;background-color:#fff;-webkit-box-shadow:0 0 6px #999;}
+#login-wrapper section#login header{margin-bottom:15px;}
+#login-wrapper section#login header h1{font-size:1.5em;font-weight:normal;text-shadow:#f0f0f0 0 1px 0;color:#f00}
+#login-wrapper section#login #third-party-login,#login-wrapper section#login p{margin:0 0 10px 0;}
+#login-wrapper section#login #third-party-login a.button,#login-wrapper section#login p a.button{max-width:250px;width:100%;-webkit-border-radius:5px;display:block;margin:0 auto;font-size:inherit;text-decoration:none;font-weight:bold;line-height:2;color:#fff;text-shadow:#000 0 1px 0;background-image:-webkit-gradient(linear,left bottom,left top,color-stop(.2,#1d4088),color-stop(.6,#627aad));border:2px solid #1d4088}
+#login-wrapper section#login #kahnoodle-login p{margin:0 0 10px 0}
+#login-wrapper section#login #kahnoodle-login input{max-width:237px;width:100%;padding:5px 7px;-webkit-border-radius:5px;display:block;margin:0 auto;font-size:inherit;line-height:1.5}
+#login-wrapper section#login #kahnoodle-login a.button{max-width:250px;width:100%;-webkit-border-radius:5px;display:block;margin:0 auto;font-size:inherit;text-decoration:none;font-weight:bold;line-height:2;color:#fff;text-shadow:#000 0 1px 0;background-image:-webkit-gradient(linear,left bottom,left top,color-stop(.2,#780000),color-stop(.6,#f00));border:2px solid #780000}
+#login-wrapper section#login #kahnoodle-login a.button:active{background-image:-webkit-gradient(linear,left bottom,left top,color-stop(.2,#f00),color-stop(.6,#780000))}
