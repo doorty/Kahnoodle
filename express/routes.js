@@ -1,5 +1,5 @@
 module.exports = function(app) {
-  
+
   function requiresLogin(req, res, next) {
     if (req.session.user) {
       next();

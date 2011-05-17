@@ -18,7 +18,16 @@ $(document).ready(function() {
   
   socket.on('connect', function() { 
     console.log('connected at ' + new Date());
+    
+    socket.emit('login', {
+      username: 'bob',
+      password: 'pass'
+    });
   }); 
+  
+  socket.on('test', function(msg) {
+    console.log('test msg = ' + msg);
+  });
   
   socket.on('message', function(json) { 
     console.log('json: ' + json.sessionId);

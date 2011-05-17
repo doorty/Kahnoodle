@@ -1,12 +1,8 @@
 var express = require('express');
-var mongoose = require('mongoose');
-
-mongoose.connect('mongodb://localhost/com_kahnoodle');
-
 var app = express.createServer();
 
-require('./config')(express, app);
-require('./routes')(app);
+require('./mongodb');
+require('./express')(express, app);
 require('./socket')(app);
 
 app.listen(3000);

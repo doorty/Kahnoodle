@@ -4,8 +4,6 @@ module.exports = function(app) {
 
   // socket.io
   io.listen(app).on('connection', function(socket) { 
-  
-    console.log('connection!')
 
     // tell me what is my id
      socket.send( { sessionId: socket.sessionId } );
@@ -17,6 +15,13 @@ module.exports = function(app) {
   
     // tell everyone including myself
     // socket.boradcast({});
+    
+    socket.emit('test', { msg: 'hello'});
+    
+    socket.on('login', function(account) {
+      console.log('tried to sign in as ' + account.username + ' with password ' + account.password);
+      socket.send('login received');
+    });
   
     socket.on('message', function(json) { 
 
